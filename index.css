@@ -278,7 +278,7 @@ img {
   border-radius: 30px;
   background:
     linear-gradient(rgba(5, 5, 5, 0.12), rgba(5, 5, 5, 0.35)),
-    url("fotos-perros/foto\ perro.jpg");
+    url("Fotos\ de\ Perfil.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -361,7 +361,7 @@ img {
   border-radius: 38px;
   background:
     linear-gradient(rgba(5, 5, 5, 0.15), rgba(5, 5, 5, 0.4)),
-    url("fotos-perros/foto\ 2.jpg");
+    url("fotos-perros/foto\ perro.jpg");
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(214, 170, 118, 0.25);
@@ -432,15 +432,40 @@ img {
 .service-card {
   padding: 34px 28px;
   border-radius: 30px;
-  background: var(--carbon);
-  border: 1px solid rgba(214, 170, 118, 0.18);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
   transition: 0.3s ease;
+  background: linear-gradient(
+    270deg,
+    #8fb0b6,
+    #a9cbd2,
+    #7fa6ae,
+    #b8dce3,
+    #8fb0b6
+  );
+  background-size: 400% 400%;
+  animation: moverColoresServicios 4s ease infinite;
+  border: 1px solid #7ed7ea;
+  box-shadow: 0 18px 35px rgba(126, 215, 234, 0.18);
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(214, 170, 118, 0.5);
+  transform: translateY(-8px) scale(1.02);
+  border-color: #b8f3ff;
+  box-shadow: 0 22px 45px rgba(126, 215, 234, 0.28);
+}
+
+/* Movimiento del color */
+@keyframes moverColoresServicios {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .service-icon {
@@ -600,12 +625,19 @@ img {
 
 .footer-brand p {
   max-width: 420px;
-  color: var(--texto-suave);
+  color: #fff2df;
   line-height: 1.8;
 }
 
 .footer h3 {
-  color: var(--dorado-claro);
+  color: #fff2df;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+  color: #fff2df;
   font-size: 22px;
   font-weight: 900;
   margin-bottom: 5px;
@@ -849,3 +881,777 @@ img {
   }
 }
 
+/* QUIÉNES SOMOS / CÓMO TRABAJAMOS */
+
+.who-section {
+  background:
+    radial-gradient(circle at top left, rgba(214, 170, 118, 0.13), transparent 32%),
+    linear-gradient(135deg, #050505 0%, #101010 60%, #1c1209 100%);
+}
+
+.section-title p {
+  max-width: 720px;
+  margin: 18px auto 0;
+  color: var(--texto-suave);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.who-card {
+  padding: 34px 28px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(214, 170, 118, 0.2);
+  box-shadow: var(--sombra);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.who-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(214, 170, 118, 0.08);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+}
+
+.who-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214, 170, 118, 0.5);
+}
+
+.featured-card {
+  background: linear-gradient(
+    135deg,
+    rgba(214, 170, 118, 0.18),
+    rgba(255, 255, 255, 0.04)
+  );
+}
+
+.who-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  background: rgba(214, 170, 118, 0.14);
+  color: var(--dorado-claro);
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.who-card h3 {
+  color: var(--dorado-claro);
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.who-card p {
+  color: var(--texto-suave);
+  line-height: 1.75;
+  font-size: 16.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* CÓMO LO HACEMOS / PROCESO */
+
+.work-process {
+  margin-top: 45px;
+  padding: 30px;
+  border-radius: 32px;
+  background: rgba(5, 5, 5, 0.55);
+  border: 1px solid rgba(214, 170, 118, 0.2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.process-step {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: 0.3s ease;
+}
+
+.process-step:hover {
+  background: rgba(214, 170, 118, 0.08);
+  transform: translateY(-5px);
+}
+
+.process-step span {
+  display: inline-block;
+  color: var(--dorado);
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.process-step h4 {
+  color: var(--texto-claro);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.process-step p {
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+/* RESPONSIVE QUIÉNES SOMOS */
+
+@media (max-width: 992px) {
+  .who-grid,
+  .work-process {
+    grid-template-columns: 1fr;
+  }
+
+  .who-card {
+    text-align: center;
+  }
+
+  .who-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .process-step {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-card {
+    padding: 28px 22px;
+  }
+
+  .work-process {
+    padding: 20px;
+  }
+
+  .process-step {
+    padding: 22px 18px;
+  }
+}
+
+/* COLORES EN CUADROS, TÍTULOS Y TEXTOS POR SECCIÓN */
+
+/* Caja general de títulos */
+
+
+/* Subtítulos pequeños */
+.section-title span,
+.section-subtitle {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+/* ========================= */
+/* QUIÉNES SOMOS */
+/* ========================= */
+
+
+.who-section .section-title span {
+  background: rgba(180, 70, 95, 0.18);
+  color: #ffb3c1;
+}
+
+.who-section .section-title h2 {
+  color: #ffe6ec;
+}
+
+.who-section .section-title p {
+  color: #e7b8c2;
+}
+
+
+/* Tarjetas de quiénes somos */
+.who-card {
+  background: rgba(80, 25, 38, 0.35);
+  border-color: rgba(180, 70, 95, 0.35);
+}
+
+.who-card h3 {
+  color: #ffd5dd;
+}
+
+.who-card p {
+  color: #e7b8c2;
+}
+
+.who-icon {
+  background: rgba(180, 70, 95, 0.22);
+  color: #ffb3c1;
+}
+
+/* ========================= */
+/* SERVICIOS */
+/* ========================= */
+
+
+
+.services .section-title span {
+  background: rgba(91, 230, 255, 0.18);
+  color: #9eeaf5;
+}
+
+.services .section-title h2 {
+  color: #dffbff;
+}
+
+.services .section-title p {
+  color: #b8dbe0;
+}
+
+/* Tarjetas de servicios */
+.service-card {
+  background: rgba(194, 237, 247, 0.671);
+  border-color: rgba(62, 226, 255, 0.674);
+}
+
+.service-card h3 {
+  color: #222537;
+}
+
+.service-card p {
+  color: #282525;
+}
+
+.service-icon {
+  background: rgb(15, 59, 67);
+  color: rgba(62, 226, 255, 0.674);
+}
+
+/* ========================= */
+/* GALERÍA */
+/* ========================= */
+
+.gallery .section-title span {
+  background: rgba(70, 150, 105, 0.18);
+  color: #b8f5d1;
+}
+
+.gallery .section-title h2 {
+  color: #e2ffed;
+}
+
+.gallery .section-title p {
+  color: #b9dec8;
+}
+
+.gallery-item {
+  border-color: rgba(70, 150, 105, 0.4);
+}
+
+/* ========================= */
+/* RESERVA */
+/* ========================= */
+
+.reservation-box {
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.78), rgba(5, 5, 5, 0.9)),
+    url("../img/perro2.jpg");
+  background-size: cover;
+  background-position: center;
+  border-color: rgba(214, 170, 118, 0.45);
+}
+
+.reservation-box span {
+  background: rgba(214, 170, 118, 0.15);
+  color: #f1d0a3;
+  padding: 9px 18px;
+  border-radius: 999px;
+}
+
+.reservation-box h2 {
+  color: #fff2df;
+}
+
+.reservation-box p {
+  color: #e4c9a8;
+}
+
+/* ========================= */
+/* PROCESO */
+/* ========================= */
+
+.work-process {
+  background: rgba(80, 25, 38, 0.28);
+  border-color: rgba(214, 170, 118, 0.22);
+}
+
+.process-step {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(214, 170, 118, 0.16);
+}
+
+.process-step span {
+  color: #f1d0a3;
+}
+
+.process-step h4 {
+  color: #fff2df;
+}
+
+.process-step p {
+  color: #dbc4a7;
+}
+
+/* REDES SOCIALES FLOTANTES */
+
+.social-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 23px;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+/* Colores de cada red */
+.facebook {
+  background: #1877f2;
+  animation: agitarWhatsapp 1.8s ease-in-out;
+}
+
+.instagram {
+  background: linear-gradient(135deg, #FEDA75, #FA7E1E,	#D62976, #962FBF, #4F5BD5);
+  animation: agitarWhatsapp 1.8s ease-in-out;
+}
+
+.tiktok {
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: agitarWhatsapp 1.8s ease-in-out;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+/* Animación especial para WhatsApp */
+.whatsapp i {
+  animation: agitarWhatsapp 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes agitarWhatsapp {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  10% {
+    transform: rotate(14deg) scale(1.08);
+  }
+
+  20% {
+    transform: rotate(-12deg) scale(1.08);
+  }
+
+  30% {
+    transform: rotate(10deg) scale(1.08);
+  }
+
+  40% {
+    transform: rotate(-8deg) scale(1.08);
+  }
+
+  50% {
+    transform: rotate(5deg) scale(1.05);
+  }
+
+  60% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Pulso para WhatsApp */
+.whatsapp {
+  animation: pulsoWhatsapp 2.4s ease-in-out infinite;
+}
+
+@keyframes pulsoWhatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-float {
+    right: 16px;
+    bottom: 16px;
+    gap: 10px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+}
+
+/* ============================= */
+/* CELULAR */
+/* ============================= */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+  }
+
+  .logo-text h1 {
+    font-size: 21px;
+  }
+
+  .logo-text span {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .menu {
+    position: absolute;
+    top: 82px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 22px;
+    border-radius: 22px;
+    background: #101010;
+    border: 1px solid rgba(214, 170, 118, 0.25);
+    box-shadow: var(--sombra);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    width: 100%;
+  }
+
+  .btn-menu {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 55px 16px;
+    gap: 35px;
+  }
+
+  .hero-text h2 {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image-card {
+    padding: 14px;
+    border-radius: 26px;
+  }
+
+  .hero-image {
+    min-height: 330px;
+    border-radius: 22px;
+  }
+
+  .hero-info {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    max-width: none;
+  }
+
+  .section {
+    padding: 65px 16px;
+  }
+
+  .section-title {
+    padding: 24px 18px;
+  }
+
+  .section-title h2 {
+    font-size: 31px;
+  }
+
+  .section-title p {
+    font-size: 16px;
+  }
+
+  .features,
+  .services-grid,
+  .gallery-grid,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .who-card,
+  .service-card,
+  .process-step {
+    padding: 26px 20px;
+  }
+
+  .gallery-item,
+  .gallery-item img,
+  .gallery-large,
+  .gallery-large img {
+    min-height: 280px;
+  }
+
+  .reservation-box {
+    padding: 50px 18px;
+    border-radius: 28px;
+  }
+
+  .reservation-box h2 {
+    font-size: 31px;
+  }
+
+  .footer {
+    padding: 60px 16px 100px;
+  }
+
+  .footer-logo {
+    align-items: flex-start;
+  }
+
+  .footer-logo img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* ============================= */
+/* CELULAR PEQUEÑO */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .logo-text span {
+    display: none;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text h1 {
+    font-size: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 34px;
+  }
+
+  .hero-badge {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .who-icon,
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .gallery-item,
+  .gallery-item img,
+  .gallery-large,
+  .gallery-large img {
+    min-height: 240px;
+  }
+}
+
+/* Teléfono */
+.fa-phone {
+  color: #25d366 !important;
+}
+
+/* Ubicación */
+.fa-location-dot {
+  color: #e74c3c !important;
+}
+
+/* Correo */
+.fa-envelope {
+  color: #f1c40f !important;
+}
+
+/* Reloj */
+.fa-clock {
+  color: #3498db !important;
+}
+
+/* Huellita */
+.fa-paw {
+  color: #d6aa76 !important;
+}
+
+/* Perrito */
+.fa-dog {
+  color: #8c6c3c !important;
+}
+
+.fa-shield-dog {
+  color: #d4ccc0 !important;
+}
+
+/* Corazón */
+.fa-heart,
+.fa-heart-circle-check {
+  color: #ff4d6d !important;
+}
+
+/* Casa / guardería */
+.fa-house {
+  color: #dffbff !important;
+}
+
+/* Entrenamiento */
+.fa-graduation-cap,
+.fa-medal {
+  color: #dffbff !important;
+}
+
+/* Luna / hospedaje */
+.fa-moon {
+  color: #dffbff !important;
+}
+
+/* Hueso */
+.fa-bone {
+  color: #dffbff !important;
+}
+
+/* Carro */
+.fa-car {
+  color: #dffbff !important;
+}
+
+/* Cámara */
+.fa-camera {
+  color: #dffbff !important;
+}
+
+/* Pulso azul alrededor del cuadro */
+@keyframes pulsoServiciosAzul {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(117, 211, 224, 0.45),
+      0 16px 35px rgba(0, 0, 0, 0.25);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 14px rgba(117, 211, 224, 0),
+      0 16px 35px rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(117, 211, 224, 0),
+      0 16px 35px rgba(0, 0, 0, 0.25);
+  }
+}
