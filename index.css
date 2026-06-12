@@ -278,7 +278,7 @@ img {
   border-radius: 30px;
   background:
     linear-gradient(rgba(5, 5, 5, 0.12), rgba(5, 5, 5, 0.35)),
-    url("Fotos\ de\ Perfil.jpg");
+    url("logo-educando.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -361,7 +361,7 @@ img {
   border-radius: 38px;
   background:
     linear-gradient(rgba(5, 5, 5, 0.15), rgba(5, 5, 5, 0.4)),
-    url("fotos-perros/foto\ perro.jpg");
+    url("fotos-perros/foto\ perro\ 1.jpg");
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(214, 170, 118, 0.25);
