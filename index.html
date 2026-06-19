@@ -3,72 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educando - Guardería Canina</title>
 
-  <title>Educando | Centro de Entrenamiento y Guardería Canina</title>
-
-  <!-- Fuente -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" 
-    rel="stylesheet"
-  >
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Font Awesome -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  >
-
-  <!-- CSS -->
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- BARRA PRINCIPAL -->
   <header class="header">
     <nav class="navbar">
 
-      <a href="#" class="logo">
-        <img src="logo-educando.jpg"Logo Educando" class="logo-img">
-
-        <div class="logo-text">
-          <h1>Educando</h1>
-          <span>Entrenamiento y guardería canina</span>
+      <a href="index.html" class="logo">
+        <img src="logo-educando.jpg" alt="Logo Educando">
+        <div>
+          <h1>EDUCANDO</h1>
+          <span>Entrenamiento y Guardería Canina</span>
         </div>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <input type="checkbox" id="menu-toggle">
 
-      <ul class="menu" id="menu">
-        <li><a href="#nosotros">Nosotros</a></li>
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Galería</a></li>
         <li><a href="#quienes-somos">Quiénes Somos</a></li>
-        <li>
-          <a href="https://wa.me/573058172753" target="_blank" class="btn-menu">
-            <i class="fa-brands fa-whatsapp"></i>
-            Reservar
-          </a>
-        </li>
+        <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+        <li><a href="galeria.html">Galería</a></li>
       </ul>
+
+      <a href="https://wa.me/573058172753" class="btn-reservar">
+        <i class="fa-brands fa-whatsapp"></i>
+        Reservar
+      </a>
 
     </nav>
   </header>
 
-  <!-- HERO -->
-  <main>
-    <section class="hero" id="inicio">
+  <!-- REDES SOCIALES LATERALES -->
+  <div class="social-fixed">
+  <a href="https://www.facebook.com/educandocaninooficial/" class="facebook" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/educandocanino85" class="instagram" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://wa.me/573058172753" class="tiktok" aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+  <a href="https://www.tiktok.com/@educandocanino85" class="whatsapp" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+  <section class="hero" id="inicio">
       <div class="hero-content">
 
         <div class="hero-text">
-          <span class="hero-badge">
-            <i class="fa-solid fa-paw"></i>
-            Cuidado, disciplina y amor
-          </span>
 
           <h2>
             El mejor lugar para educar y cuidar a tu mascota
@@ -99,365 +102,152 @@
       </div>
     </section>
 
-    <!-- NOSOTROS -->
-    <section class="section about" id="nosotros">
-      <div class="container about-container">
+  <!-- SERVICIOS -->
+  <section class="section servicios" id="servicios">
+    <div class="section-title">
+      <span>Lo que ofrecemos</span>
+      <h2>Servicios</h2>
+    </div>
 
-        <div class="about-image"></div>
+    <div class="cards">
 
-        <div class="about-text">
-          <span class="section-subtitle">Sobre nosotros</span>
+      <article class="card">
+        <i class="fa-solid fa-paw"></i>
+        <h3>Guardería Canina</h3>
+        <p>Cuidado durante el día con actividades como juegos, descanso, alimentación y supervisión.</p>
+      </article>
 
-          <h2>Un centro pensado para el bienestar de tu perro</h2>
+      <article class="card">
+        <i class="fa-solid fa-medal"></i>
+        <h3>Entrenamiento</h3>
+        <p>Educación canina para mejorar conducta.</p>
+      </article>
 
-          <p>
-            Somos un centro de entrenamiento y guardería canina enfocado en el cuidado,
-            la educación y la socialización de tu mascota. Nuestro objetivo es que cada perro
-            se sienta tranquilo, acompañado y feliz.
-          </p>
+      <article class="card">
+        <i class="fa-solid fa-bed"></i>
+        <h3>Hotel Canino</h3>
+        <p>Ideal para viajes, fines de semana o días en los que necesitas apoyo.</p>
+      </article>
 
-          <div class="features">
-            <div class="feature-card">
-              <i class="fa-solid fa-shield-dog"></i>
-              <h3>Seguridad</h3>
-              <p>Supervisión y espacios adecuados para cada mascota.</p>
-            </div>
+      <article class="card">
+        <i class="fa-solid fa-truck-field"></i>
+        <h3>Recogida a domicilio</h3>
+        <p>Transporte seguro para facilitar el traslado de tu mascota.</p>
+      </article>
 
-            <div class="feature-card">
-              <i class="fa-solid fa-heart"></i>
-              <h3>Cariño</h3>
-              <p>Trato cercano, paciente y respetuoso.</p>
-            </div>
+      <article class="card">
+        <i class="fa-solid fa-shield-dog"></i>
+        <h3>Reporte del día</h3>
+        <p>Te compartimos novedades para que sepas cómo estuvo tu peludito por medio de videollamadas, videos y fotos.</p>
+      </article>
 
-            <div class="feature-card">
-              <i class="fa-solid fa-dog"></i>
-              <h3>Socialización</h3>
-              <p>Actividades para compartir y aprender.</p>
-            </div>
+    </div>
+  </section>
 
-            <div class="feature-card">
-              <i class="fa-solid fa-medal"></i>
-              <h3>Entrenamiento</h3>
-              <p>Educación canina con disciplina positiva.</p>
-            </div>
-          </div>
-        </div>
+  <!-- QUIÉNES SOMOS -->
+  <section class="section quienes" id="quienes-somos">
+    <div class="section-title">
+      <span>Conócenos</span>
+      <h2>Quiénes Somos</h2>
+    </div>
 
+    <div class="quienes-grid">
+
+      <div class="info-item">
+        <i class="fa-solid fa-users"></i>
+        <h3>Quiénes somos</h3>
+        <p>Somos un centro de entrenamiento y guardería canina dedicado al bienestar, cuidado y educación de los perros. Nuestro compromiso es brindar un espacio seguro, tranquilo y lleno de cariño.</p>
       </div>
-    </section>
 
-    <!-- QUIÉNES SOMOS / CÓMO TRABAJAMOS -->
-    <section class="section who-section" id="quienes-somos">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Conoce Educando</span>
-          <h2>Quiénes somos</h2>
-          <p>
-            En Educando trabajamos con amor, paciencia y disciplina para que cada perro
-            aprenda, socialice y se sienta seguro en un ambiente familiar.
-          </p>
-        </div>
-
-        <div class="who-grid">
-
-          <article class="who-card">
-            <div class="who-icon">
-              <i class="fa-solid fa-paw"></i>
-            </div>
-
-            <h3>Quiénes somos</h3>
-
-            <p>
-              Somos un centro de entrenamiento y guardería canina dedicado al bienestar,
-              cuidado y educación de los perros. Nuestro compromiso es brindar un espacio
-              seguro, tranquilo y lleno de cariño.
-            </p>
-          </article>
-
-          <article class="who-card featured-card">
-            <div class="who-icon">
-              <i class="fa-solid fa-dog"></i>
-            </div>
-
-            <h3>Cómo trabajamos</h3>
-
-            <p>
-              Cada mascota recibe atención personalizada según su comportamiento,
-              energía y necesidades. Observamos, guiamos y acompañamos su proceso
-              para que se adapte de forma positiva.
-            </p>
-          </article>
-
-          <article class="who-card">
-            <div class="who-icon">
-              <i class="fa-solid fa-heart-circle-check"></i>
-            </div>
-
-            <h3>Cómo lo hacemos</h3>
-
-            <p>
-              Combinamos juegos, socialización, rutinas, descanso y entrenamiento básico.
-              Usamos paciencia, constancia y refuerzo positivo para lograr una experiencia
-              segura y agradable.
-            </p>
-          </article>
-
-        </div>
-
+      <div class="info-item">
+        <i class="fa-solid fa-person-chalkboard"></i>
+        <h3>Cómo trabajamos</h3>
+        <p>Cada mascota recibe atención personalizada según su comportamiento, energía y necesidades. Observamos, guiamos y acompañamos su proceso para que se adapte de forma positiva.</p>
       </div>
-    </section>
 
-    <!-- SERVICIOS -->
-    <section class="section services" id="servicios">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Servicios</span>
-          <h2>Lo que tenemos para tu mascota</h2>
-        </div>
-
-        <div class="services-grid">
-
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-house"></i>
-            </div>
-            <h3>Guardería canina</h3>
-            <p>
-              Cuidado durante el día con actividades como juegos, descanso, alimentación y supervisión.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-            <h3>Entrenamiento</h3>
-            <p>
-              Educación canina para mejorar conducta.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-moon"></i>
-            </div>
-            <h3>Hotel Canino</h3>
-            <p>
-              Ideal para viajes, fines de semana o días en los que necesitas apoyo.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-car"></i>
-            </div>
-            <h3>Recogida a domicilio</h3>
-            <p>
-              Transporte seguro para facilitar el traslado de tu mascota.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-camera"></i>
-            </div>
-            <h3>Reporte del día</h3>
-            <p>
-              Te compartimos novedades para que sepas cómo estuvo tu peludito por medio de viodeollamadas, videos y fotos.
-            </p>
-          </article>
-
-        </div>
+      <div class="info-item">
+        <i class="fa-solid fa-list-check"></i>
+        <h3>Cómo lo hacemos</h3>
+        <p>Combinamos juegos, socialización, rutinas, descanso y entrenamiento básico. Usamos paciencia, constancia y refuerzo positivo para lograr una experiencia segura y agradable.</p>
       </div>
-    </section>
 
-    <!-- GALERÍA -->
-    <section class="section gallery" id="galeria">
-      <div class="container">
+    </div>
+  </section>
 
-        <div class="section-title">
-          <span>Galería</span>
-          <h2>Momentos felices en Educando</h2>
-        </div>
+  <!-- RESERVA -->
+  <section class="reserva" id="inicio">
+    <div class="reserva-card">
 
-        <div class="gallery-grid">
-          <div class="gallery-item gallery-large">
-            <img src="fotos-perros/foto perro 2.jpg" alt="Perro en guardería">
-          </div>
-
-          <div class="gallery-item">
-            <img src="fotos-perros/foto perro 3.jpg" alt="Perro jugando">
-          </div>
-
-          <div class="gallery-item">
-            <img src="fotos-perros/foto perro 4.jpg" alt="Perro entrenando">
-          </div>
-
-          <div class="gallery-item">
-            <img src="fotos-perros/foto perro 5.jpg" alt="Perro descansando">
-          </div>
-
-          <div class="gallery-item">
-            <img src="fotos-perros/foto perro 6.jpg" alt="Perro feliz">
-          </div>
-        </div>
-
+      <div class="tag">
+        <i class="fa-solid fa-paw"></i>
+        Reserva fácil
       </div>
-    </section>
 
-    <!-- RESERVA -->
-    <section class="section reservation-section">
-      <div class="container">
-        <div class="reservation-box">
-          <span>
-            <i class="fa-solid fa-paw"></i>
-            Reserva fácil
-          </span>
+      <h2>¿Quieres separar un cupo para tu mascota?</h2>
 
-          <h2>¿Quieres separar un cupo para tu mascota?</h2>
+      <p>
+        Escríbenos por WhatsApp y te contamos disponibilidad, horarios,
+        servicios y todo lo que tu peludito necesita.
+      </p>
 
-          <p>
-            Escríbenos por WhatsApp y te contamos disponibilidad, horarios y servicios.
-          </p>
+      <a href="#" class="reserva-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        Hablar por WhatsApp
+      </a>
 
-          <a href="https://wa.me/573058172753" target="_blank" class="btn-primary">
-            <i class="fa-brands fa-whatsapp"></i>
-            Hablar por WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="footer" id="contacto">
-    <div class="container footer-container">
+  <footer class="footer">
+
+    <div class="footer-content">
 
       <div class="footer-brand">
         <div class="footer-logo">
           <img src="logo-educando.jpg" alt="Logo Educando">
           <div>
-            <h4>Educando</h4>
+            <h2>Educando</h2>
             <span>Centro de entrenamiento y guardería canina</span>
           </div>
         </div>
 
         <p>
-          Cuidamos, educamos y acompañamos a tu mascota con amor, paciencia,
-          disciplina y seguridad.
+          Cuidamos, educamos y acompañamos a tu mascota con amor,
+          paciencia, disciplina y seguridad.
         </p>
 
-        <div class="socials">
-          <a href="https://www.facebook.com/educandocaninooficial/" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-
-          <a href="https://www.instagram.com/educandocanino85" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a href="https://wa.me/573058172753" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-
-          <a href="https://www.tiktok.com/@educandocanino85" aria-label="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/educandocaninooficial/"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/educandocanino85"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/573058172753"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@educandocanino85"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-column">
         <h3>Servicios</h3>
         <a href="#servicios">Guardería canina</a>
         <a href="#servicios">Entrenamiento</a>
-        <a href="#servicios">Hospedaje</a>
-        <a href="#servicios">Socialización</a>
+        <a href="#servicios">Hotel Canino</a>
+        <a href="#servicios">Reporte del día</a>
       </div>
 
-      <div class="footer-contact">
+      <div class="footer-column">
         <h3>Contacto</h3>
-
-        <p>
-          <i class="fa-solid fa-location-dot"></i>
-          Cerca de Cali, Valle del Cauca
-        </p>
-
-        <p>
-          <i class="fa-solid fa-phone"></i>
-          +57 305 8172753
-        </p>
-
-        <p>
-          <i class="fa-solid fa-envelope"></i>
-          educandocanino85@gmail.com
-        </p>
-
-        <p>
-          <i class="fa-solid fa-clock"></i>
-          Lunes a domingo
-        </p>
+        <p><i class="fa-solid fa-location-dot"></i> Cerca de Cali, Valle del Cauca</p>
+        <p><i class="fa-solid fa-phone"></i> +57 305 8172753</p>
+        <p><i class="fa-solid fa-envelope"></i> educandocanino85@gmail.com</p>
+        <p><i class="fa-solid fa-clock"></i> Lunes a domingo</p>
       </div>
 
     </div>
 
-    <div class="footer-copy">
-      © 2026 Educando. Todos los derechos reservados.
+    <div class="footer-bottom">
+      <p>© 2026 Educando. Todos los derechos reservados.</p>
     </div>
+
   </footer>
-
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <!-- REDES SOCIALES FLOTANTES -->
-<div class="social-float">
-
-  <a href="https://www.facebook.com/educandocaninooficial/" target="_blank" class="social-btn facebook" aria-label="Facebook">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.instagram.com/educandocanino85" target="_blank" class="social-btn instagram" aria-label="Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-
-  <a href="https://www.tiktok.com/@educandocanino85" target="_blank" class="social-btn tiktok" aria-label="TikTok">
-    <i class="fa-brands fa-tiktok"></i>
-  </a>
-
-  <a href="https://wa.me/573001234567" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-</div>
-
-  <!-- JS MENÚ RESPONSIVE -->
-  <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const menu = document.getElementById("menu");
-
-    menuToggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-
-      const icon = menuToggle.querySelector("i");
-
-      if (menu.classList.contains("active")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
-      } else {
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-      }
-    });
-
-    document.querySelectorAll(".menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("active");
-
-        const icon = menuToggle.querySelector("i");
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-      });
-    });
-  </script>
 
 </body>
 </html>
