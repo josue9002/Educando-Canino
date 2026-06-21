@@ -440,42 +440,176 @@ body {
 
 /* SERVICIOS */
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.servicios-perrunos {
+  padding: 50px 10.5%;
+  background: #f5f5f5;
 }
 
-.card {
-  background: rgb(82, 83, 111);
-  padding: 30px 24px;
-  border-radius: 20px;
-  border: 1px solid rgba(232, 189, 130, 0.16);
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+.servicios-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(232, 189, 130, 0.48);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.22);
+/* Imagen izquierda */
+.servicios-imagen {
+  position: relative;
+  flex: 1 1 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
 }
 
-.card i {
+.circulo-fondo {
+  width: 420px;
+  height: 420px;
+  background: #f2c400;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.servicios-imagen img {
+  position: relative;
+  z-index: 2;
+  max-width: 440px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Texto derecha */
+.servicios-info {
+  flex: 1 1 520px;
+}
+
+.section-title span {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0b7a6d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
   font-size: 38px;
-  color: #faf7a0;
-  margin-bottom: 22px;
+  color: #0b6b7a;
+  margin-bottom: 15px;
 }
 
-.card h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+.section-title p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  max-width: 700px;
+}
+
+/* Grid de servicios */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.servicio-card {
+  background: #fff;
+  padding: 28px 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.servicio-card i {
+  font-size: 40px;
+  color: #0b7a71;
+  margin-bottom: 18px;
+}
+
+.servicio-card h3 {
+  font-size: 24px;
+  color: #0b7a71;
   margin-bottom: 12px;
-  color: #ffffff;
 }
 
-.card p {
-  color: #f0e7df;
-  line-height: 1.7;
+.servicio-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .servicios-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicios-info {
+    width: 100%;
+  }
+
+  .section-title p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .circulo-fondo {
+    width: 340px;
+    height: 340px;
+  }
+
+  .servicios-imagen img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .servicio-card h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicios-perrunos {
+    padding: 60px 5%;
+  }
+
+  .circulo-fondo {
+    width: 260px;
+    height: 260px;
+  }
+
+  .servicios-imagen img {
+    max-width: 270px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .section-title p,
+  .servicio-card p {
+    font-size: 15px;
+  }
 }
 
 /* QUIÉNES SOMOS */
@@ -509,6 +643,148 @@ body {
 
 .info-item p {
   color: #dad2c5;
+}
+
+/*INSTAGRAM*/
+
+.instagram-section {
+  background: #efefef;
+  padding:50px 20px;
+}
+
+.instagram-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #000000;
+}
+
+/* ENCABEZADO */
+.instagram-header {
+  padding: 20px 30px;
+  border-bottom: 1px solid #0c0c0c;
+}
+
+.instagram-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e1306c;
+  padding: 0px;
+  background: #fff;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.profile-top h2 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.profile-user {
+  color: #c5c5c5;
+  margin: auto;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+.profile-stats strong {
+  color: #c5c5c5;
+}
+
+.follow-btn {
+  background: #0095f6;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.follow-btn:hover {
+  background: #007ed6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .instagram-feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .instagram-header {
+    padding: 20px;
+  }
+
+  .profile-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-stats {
+    gap: 15px;
+    font-size: 15px;
+  }
+
+  .instagram-feed {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-feed {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .profile-top h2 {
+    font-size: 18px;
+  }
+
+  .profile-user,
+  .profile-stats {
+    font-size: 14px;
+  }
+
+  .follow-btn {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
 }
 
 /* RESERVA */
