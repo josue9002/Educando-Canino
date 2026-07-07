@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Educando - Guardería Canina</title>
+  <title>Educando - Galeria</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<link rel="icon" href="logo-banner.png">
   <link rel="stylesheet" href="styles-galeria.css">
 </head>
 
@@ -68,22 +68,85 @@
   </a>
 </div>
 
-  <!-- GALERÍA -->
-  <section class="section galeria" id="galeria">
+  <section class="galeria-section" id="galeria">
+  <div class="galeria-contenedor">
+
     <div class="section-title">
-      <span>Momentos felices</span>
-      <h2>Galería</h2>
-      <p>
-        Algunos espacios y momentos especiales con nuestros peluditos.
-      </p>
+      <span>Momentos especiales con nuestro alumnos</span>
+      <h2>Nuestra Galería</h2>
     </div>
 
-    <div class="gallery-grid">
-      <img src="fotos-perros/foto perro 1.jpg" alt="Perro en guardería">
-      <img src="fotos-perros/foto perro 2.jpg" alt="Perro jugando">
-      <img src="fotos-perros/foto perro 3.jpg" alt="Perro entrenando">
+    <div class="galeria-grid" id="galeriaGrid">
+
+      <div class="galeria-card grande">
+        <img src="galeria-perros/zonas verdes.jpg" alt="Zonas verdes">
+        <span>Zonas verdes</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/foto-perro-2.jpg" alt="Recreación">
+        <span>Recreación</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/foto-perro-9.jpg" alt="Instalaciones">
+        <span>Instalaciones</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/foto-perro-13.jpg" alt="Socialización">
+        <span>Socialización</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/piscinas.jpg" alt="Piscina">
+        <span>Piscina</span>
+      </div>
+
+      <div class="galeria-card ancho">
+        <img src="galeria-perros/foto-perro-7.jpg" alt="Acompañamiento">
+        <span>Acompañamiento</span>
+      </div>
+
+      <div class="galeria-card grande">
+        <img src="galeria-perros/modo-seleccion-2.jpg" alt="Modo Selección">
+        <span>Modo Selección</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/juegos.jpg" alt="Juegos">
+        <span>Juegos</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/foto-perro-6.jpg" alt="Entrenamiento">
+        <span>Entrenamiento</span>
+      </div>
+
+      <div class="galeria-card grande">
+        <img src="galeria-perros/rio.jpg" alt="Rio">
+        <span>Paseo por el Rio</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/transporte.jpg" alt="Transporte">
+        <span>Transporte</span>
+      </div>
+
+      <div class="galeria-card">
+        <img src="galeria-perros/modo-seleccion-1.jpg" alt="Selección">
+        <span>MODO SELECCIÓN</span>
+      </div>
+
+      <div class="galeria-card ancho">
+        <img src="galeria-perros/foto-perro-8.jpg" alt="Cuidado canino">
+        <span>Cuidado canino</span>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -114,10 +177,10 @@
 
       <div class="footer-column">
         <h3>Servicios</h3>
-        <a href="#servicios">Guardería canina</a>
-        <a href="#servicios">Entrenamiento</a>
-        <a href="#servicios">Hospedaje</a>
-        <a href="#servicios">Socialización</a>
+        <a href="index.html#servicios">Guardería canina</a>
+        <a href="index.html#servicios">Entrenamiento</a>
+        <a href="index.html#servicios">Hospedaje</a>
+        <a href="index.html#servicios">Socialización</a>
       </div>
 
       <div class="footer-column">
@@ -136,5 +199,31 @@
 
   </footer>
 
+  <script>
+  const inputImagenes = document.getElementById("inputImagenes");
+  const galeriaGrid = document.getElementById("galeriaGrid");
+
+  inputImagenes.addEventListener("change", function () {
+    const archivos = Array.from(this.files);
+
+    archivos.forEach((archivo) => {
+      const lector = new FileReader();
+
+      lector.onload = function (e) {
+        const card = document.createElement("div");
+        card.classList.add("galeria-card");
+
+        card.innerHTML = `
+          <img src="${e.target.result}" alt="Imagen agregada">
+          <span>Nueva foto</span>
+        `;
+
+        galeriaGrid.appendChild(card);
+      };
+
+      lector.readAsDataURL(archivo);
+    });
+  });
+</script>
 </body>
 </html>
