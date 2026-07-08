@@ -458,6 +458,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .social-fixed{
+    display: none;
+  }
+
 }
 
 
