@@ -231,166 +231,11 @@ body {
   background: #25d366;
 }
 
-/* HERO */
-
-.hero {
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(214, 170, 118, 0.24), transparent 28%),
-    radial-gradient(circle at 90% 15%, rgba(241, 208, 163, 0.11), transparent 30%),
-    linear-gradient(135deg, #050505 0%, #101010 55%, #25180d 100%);
-  overflow: hidden;
-  margin-bottom: 50PX;
-}
-
-.hero-content {
-  max-width: 1200px;
-  margin: auto;
-  padding: 70px 0px;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 11px 18px;
-  background: rgba(214, 170, 118, 0.12);
-  border: 1px solid rgba(214, 170, 118, 0.35);
-  border-radius: 999px;
-  color: var(--dorado-claro);
-  font-weight: 900;
-  margin-bottom: 24px;
-}
-
-.hero-text h2 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1;
-  font-weight: 900;
-  color: #e5e5e3;
-  margin-bottom: 24px;
-}
-
-.hero-text p {
-  max-width: 590px;
-  color: var(--texto-suave);
-  font-size: 19px;
-  line-height: 1.8;
-  margin-bottom: 34px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.btn-primary,
-.btn-secondary {
-  padding: 16px 26px;
-  border-radius: 999px;
-  font-weight: 900;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: 0.3s ease;
-  text-decoration: none;
-}
-
-.btn-primary {
-  box-shadow: 0 15px 28px rgba(214, 170, 118, 0.23);
-    background: linear-gradient(
-    270deg,
-    #5ed088,
-    #00cf4c,
-    #25d366,
-    #47d47a
-  );
-  background-size: 300% 300%;
-  color: #ffffff;
-  animation: moverColores 4s ease infinite;
-}
-
-@keyframes moverColores {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-.btn-secondary {
-  color: #feffff;
-  border: 1px solid rgba(8, 107, 157, 0.35);
-  background: rgb(6, 107, 180);
-  text-decoration: none;
-}
-
-.btn-secondary:hover {
-  transform: translateY(-4px);
-}
-
-.hero-image-card {
-  background: #e7cca6;
-  border: 1px solid rgba(214, 170, 118, 0.25);
-  padding: 20px;
-  border-radius: 38px;
-  box-shadow: var(--sombra);
-}
-
-.hero-image {
-  min-height: 480px;
-  border-radius: 30px;
-  background:
-    linear-gradient(rgba(241, 241, 241, 0.12), rgba(5, 5, 5, 0.35)),
-    url("logo-educando.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-info {
-  position: absolute;
-  left: 22px;
-  bottom: 22px;
-  max-width: 310px;
-  padding: 18px;
-  border-radius: 22px;
-  background: rgba(5, 5, 5, 0.78);
-  border: 1px solid rgba(214, 170, 118, 0.25);
-  backdrop-filter: blur(10px);
-}
-
-.hero-info h3 {
-  color: var(--dorado-claro);
-  font-size: 21px;
-  font-weight: 900;
-}
-
-.hero-info p {
-  color: var(--texto-suave);
-  margin-top: 5px;
-  line-height: 1.5;
-}
-
 /* SECCIONES GENERALES */
 
 .section {
-  width: min(1200px, 92%);
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto 30px;
   padding: 40px 40px;
   margin-top: 30px;
@@ -614,15 +459,17 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .social-fixed {
+    display: none;
+  }
+
 }
-
-
 
 @media (max-width: 600px) {
   .section {
-    width: 92%;
-    padding: 52px 22px;
-    border-radius: 28px;
+    width: 100%;
+    padding: 0px 0px;
+    border-radius: 20px;
   }
 
   .cards {
@@ -651,107 +498,12 @@ body {
   }
 }
 
-@media (max-width: 992px) {
-  .hero-content,
-  .about-container,
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .hero-text p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-}
-
-  @media (max-width: 480px) {
-  .logo-text span {
-    display: none;
-  }
-
-  .hero-text h2 {
-    font-size: 39px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-  }
-
-  }
-
-  @media (max-width: 950px) {
-  .historia-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .historia-text {
-    width: 100%;
-  }
-
-  .carrusel-historia {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    aspect-ratio: 480 / 848;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .historia-content {
-    width: 92%;
-  }
-
-  .historia-text {
-    padding: 28px 22px;
-    border-radius: 16px;
-  }
-
-  .historia-text h3 {
-    font-size: 26px;
-  }
-
-  .historia-text p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .carrusel-historia {
-    border-radius: 16px;
-  }
-
-  .btn-carrusel {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-}
-
-
 /* NUESTRA HISTORIA CANINA */
 /* ============================= */
 
 .historia-canina {
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 50px;
   background:
     radial-gradient(circle at top left, rgba(232, 189, 130, 0.35), transparent 35%),
     linear-gradient(135deg, #fff7e8, #f5dfbd);
@@ -836,11 +588,6 @@ body {
   }
 }
 
-.btn-historia:hover {
-  background: #c8893d;
-  transform: translateY(-3px);
-}
-
 /* IMAGEN DERECHA */
 
 .historia-imagen-box {
@@ -915,9 +662,9 @@ body {
 
 .video-card {
   width: 100%;
-  max-width: 390px;
+  max-width: 360px;
   padding: 18px;
-  border-radius: 34px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.68);
   box-shadow: 0 18px 45px rgba(43, 33, 24, 0.16);
   backdrop-filter: blur(10px);
@@ -958,7 +705,7 @@ body {
   aspect-ratio: 9 / 16;
   margin: 0 auto;
   padding: 10px;
-  border-radius: 34px;
+  border-radius: 20px;
   background: #1f1711;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12);
 }
@@ -968,7 +715,7 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 26px;
+  border-radius: 20px;
   background: #000;
 }
 
@@ -988,7 +735,7 @@ body {
 
 @media (max-width: 900px) {
   .historia-canina {
-    padding: 70px 18px;
+    padding: 20px 20px;
   }
 
   .historia-contenedor {
@@ -1008,10 +755,6 @@ body {
   .historia-imagen-box {
     order: -1;
   }
-
-  .social-fixed {
-    display: none;
-  }
 }
 
 @media (max-width: 900px) {
@@ -1021,7 +764,7 @@ body {
   }
 
   .video-card {
-    max-width: 380px;
+    max-width: 360px;
   }
 
   .video-celular {
@@ -1031,11 +774,12 @@ body {
 
 @media (max-width: 520px) {
   .historia-canina {
-    padding: 30px 14px;
+    padding: 14px 14px;
   }
 
   .historia-texto h2 {
-    font-size: 36px;
+    font-size: 34px;
+    padding-top: 20px;
   }
 
   .historia-texto p {
