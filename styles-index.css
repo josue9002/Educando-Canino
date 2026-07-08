@@ -1454,6 +1454,7 @@ main
 
   .servicios-perrunos {
   padding: 20px 0px;
+  padding-top: 30px;
 }
 }
 
@@ -1511,8 +1512,8 @@ main
   }
 
   .faq-title h2 {
-    font-size: 24px;
-    padding: 8px 20px;
+    font-size: 22px;
+    padding: 8px 10px;
   }
 
   .faq-question {
