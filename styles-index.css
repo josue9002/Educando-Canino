@@ -390,7 +390,7 @@ body {
   border-radius: 20px;
   background:
     linear-gradient(rgba(241, 241, 241, 0.12), rgba(5, 5, 5, 0.35)),
-    url("logos/logo-educando.jpg");
+    url("logo/logo-educando.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -534,7 +534,7 @@ main
 
 .servicios-perrunos {
   padding: 0px 20px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   background: antiquewhite;
 }
 
@@ -566,9 +566,11 @@ main
 }
 
 /* TODAS LAS CARDS */
+
 .servicio-card {
   grid-column: span 2;
-  background: aliceblue;
+  position: relative;
+  overflow: hidden;
   border-radius: 24px;
   padding: 35px 25px;
   min-height: 280px;
@@ -581,11 +583,55 @@ main
   justify-content: center;
   align-items: center;
 
+  background: transparent;
+  isolation: isolate;
   transition: all 0.3s ease;
 }
 
+/* Borde dorado animado */
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #b8860b 120deg,
+    #927e10 160deg,
+    #a48d08 190deg,
+    #76611c 220deg,
+    transparent 360deg
+  );
+  animation: bordeDorado 4s linear infinite;
+  z-index: -2;
+}
+
+/* Fondo interno de la card */
+.servicio-card::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #fff;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* Animación del borde */
+@keyframes bordeDorado {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Efecto al pasar el mouse */
 .servicio-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.35);
 }
 
 .servicio-card i {
@@ -690,6 +736,7 @@ main
   max-width: 420px;
   height: 500px;
   object-fit: cover;
+  border-radius: 30px;
   transition: transform 0.4s ease;
 }
 
@@ -883,7 +930,7 @@ main
 
 .faq-section {
   padding: 0;
-  margin: 50px 0px;
+  margin: 40px 0px;
   font-family: 'Poppins', sans-serif;
   max-width: 1200px;
   width: 100%;
@@ -1450,8 +1497,12 @@ main
   }
 
   .servicios-perrunos {
-  padding: 20px 0px;
-  padding-top: 30px;
+  padding: 30px 0px;
+}
+  .separador-paw {
+  margin: 25px auto;
+  margin-bottom: 0;
+
 }
 }
 
@@ -1520,5 +1571,186 @@ main
   .faq-answer p {
     font-size: 16px;
   }
+
+  .faq-section{
+    margin: 25px 0px;
+  }
+
+  .servicios-perrunos {
+  padding: 20px 0px;
 }
 
+}
+
+.barra-beneficios {
+  width: 100%;
+  background: #89a616;
+  padding: 26px 20px;
+  position: relative;
+}
+
+/* franja superior más oscura */
+.barra-beneficios::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.barra-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
+.beneficio-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.beneficio-item i {
+  color: #ffc400;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .barra-beneficios {
+    padding: 24px 15px;
+  }
+
+  .barra-contenedor {
+    gap: 22px;
+    justify-content: flex-start;
+  }
+
+  .beneficio-item {
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+  }
+}
+
+.icono {
+  color: #ffc400;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/* Corazón con efecto de latido */
+.latido {
+  animation: latido 1.4s infinite ease-in-out;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+/* Árbol con movimiento suave */
+.balanceo {
+  animation: balanceo 2s infinite ease-in-out;
+}
+
+@keyframes balanceo {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Carrito moviéndose */
+.mover-carro {
+  animation: moverCarro 1.8s infinite ease-in-out;
+}
+
+@keyframes moverCarro {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+/* Estrella girando 360 grados */
+.girar-estrella {
+  animation: girarEstrella 2.5s infinite linear;
+}
+
+@keyframes girarEstrella {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 390px) {
+  .barra-contenedor {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .beneficio-item {
+    font-size: 13px;
+  }
+}
+
+/* Responsive barra verde */
+@media (max-width: 768px) {
+  .barra-beneficios {
+    padding: 20px 20px;
+  }
+
+  .barra-contenedor {
+    max-width: 400px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    column-gap: 28px;
+    row-gap: 22px;
+  }
+
+  .beneficio-item {
+    width: auto;
+    justify-content: center;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .beneficio-item i {
+    font-size: 15px;
+  }
+
+  /* Primer item arriba centrado */
+  .beneficio-item:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  /* Último item abajo centrado */
+  .beneficio-item:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+}
