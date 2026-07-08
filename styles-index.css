@@ -390,7 +390,7 @@ body {
   border-radius: 20px;
   background:
     linear-gradient(rgba(241, 241, 241, 0.12), rgba(5, 5, 5, 0.35)),
-    url("logo/logo-educando.jpg");
+    url("logos/logo-educando.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
