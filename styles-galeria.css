@@ -465,7 +465,6 @@ body {
 }
 
 
-
 @media (max-width: 600px) {
   .section {
     width: 92%;
@@ -499,99 +498,7 @@ body {
   }
 }
 
-@media (max-width: 992px) {
-  .hero-content,
-  .about-container,
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .hero-text p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-}
-
-  @media (max-width: 480px) {
-  .logo-text span {
-    display: none;
-  }
-
-  .hero-text h2 {
-    font-size: 39px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-  }
-
-  }
-
-  @media (max-width: 950px) {
-  .historia-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .historia-text {
-    width: 100%;
-  }
-
-  .carrusel-historia {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    aspect-ratio: 480 / 848;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .historia-content {
-    width: 92%;
-  }
-
-  .historia-text {
-    padding: 28px 22px;
-    border-radius: 16px;
-  }
-
-  .historia-text h3 {
-    font-size: 26px;
-  }
-
-  .historia-text p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .carrusel-historia {
-    border-radius: 16px;
-  }
-
-  .btn-carrusel {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-}
+/*GALERIA*/
 
 .galeria-section {
   width: 100%;
@@ -732,7 +639,7 @@ body {
 
 @media (max-width: 560px) {
   .galeria-section {
-    padding: 50px 14px;
+    padding: 25px 14px;
   }
 
   .galeria-grid {
